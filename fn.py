@@ -1,22 +1,22 @@
-def display_books(books):
+def wyswietl_ksiazki(slownik):
     print("Lista książek:")
-    for title, pages in books.items():
-        print(f"{title}: {pages} stron")
+    for tytul, strony in slownik.items():
+        print(f"{tytul}: {strony} stron")
 
-def add_book(books, title, pages):
-    books[title] = pages
-    print(f"Dodano książkę: {title}")
+def dodaj_ksiazke(slownik, tytul, strony):
+    slownik[tytul] = strony
+    print(f"Dodano książkę: {tytul}")
 
-def delete_book(books, title):
-    if title in books:
-        del books[title]
-        print(f"Usunięto książkę: {title}")
+def usun_ksiazke(slownik, tytul):
+    if tytul in slownik:
+        del slownik[tytul]
+        print(f"Usunięto książkę: {tytul}")
     else:
-        print(f"Książka o tytule {title} nie istnieje")
+        print(f"Książka o tytule {tytul} nie istnieje")
 
-def edit_pages(books, title, new_pages):
-    if title in books:
-        books[title] = new_pages
-        print(f"Zaktualizowano liczbę stron dla książki {title}")
+def edytuj_ksiazke(slownik, tytul, nowe_strony):
+    if tytul in slownik:
+        slownik[tytul] = nowe_strony
+        print(f"Zaktualizowano liczbę stron dla książki {tytul}")
     else:
-        print(f"Książka o tytule {title} nie istnieje")
+        print(f"Książka o tytule {tytul} nie istnieje")
